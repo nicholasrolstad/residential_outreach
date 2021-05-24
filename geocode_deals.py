@@ -7,7 +7,7 @@ import keyring
 
 state = 'IL'
 SR = '3435'
-date = '20210428'
+date = '20210504'
 resi_gdb = r'C:\Users\NicholasRolstad\Documents\GitHub\residential_outreach\Markets\{0}\{0}_RESI.gdb'.format(state)
 arcpy.env.overwriteOutput = True
 arcpy.env.workspace = resi_gdb
