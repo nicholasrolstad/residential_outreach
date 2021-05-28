@@ -2,7 +2,7 @@
 import arcpy
 
 
-counties = ['Dupage', 'Winnebago', 'Mchenry']
+counties = ['Dupage']
 classes = ['HH','HM', 'MH', 'MM', 'HL', 'LH', 'LM', 'ML', 'LL']
 path = r'C:\Users\NicholasRolstad\Documents\GitHub\residential_outreach\Markets\IL\ComEd\ComEd\Default.gdb\{}_Resi' # names are County_Resi # This should be queired for service territory etc. first
 arcpy.env.workspace = r'C:\Users\NicholasRolstad\Documents\GitHub\residential_outreach\Markets\IL\ComEd\ComEd'
