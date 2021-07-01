@@ -6,17 +6,17 @@ from arcgis.features import GeoAccessor
 import keyring
 
 state = 'IL'
-SR = '3435'
+SR = '4269'
 date = '20210504'
-resi_gdb = r'C:\Users\NicholasRolstad\Documents\GitHub\residential_outreach\Markets\{0}\{0}_RESI.gdb'.format(state)
+resi_gdb = r'C:\Users\NicholasRolstad\Desktop\LMI\Default.gdb' #!!!
 arcpy.env.overwriteOutput = True
 arcpy.env.workspace = resi_gdb
 
-gis = GIS("https://www.arcgis.com", "nicholas.rolstad", keyring.get_password('esri','nicholas.rolstad'))
+gis = GIS("https://www.arcgis.com", "nicholas.rolstad", keyring.get_password('esri','nicholas.rolstad'))#!!!
 geocoder_url = r'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer'
 w_geocoder = Geocoder(geocoder_url, gis)
 
-csv = r'C:\Users\NicholasRolstad\Documents\GitHub\residential_outreach\Markets\{0}\deals.csv'.format(state)
+csv = r'C:\Users\NicholasRolstad\Desktop\LMI\resi_deals.csv'.format(state)#!!!
 df = pd.read_csv(csv)
 
 #arcpy.CreateFeatureDataset_management(resi_gdb,'Deals', arcpy.SpatialReference(3435))
@@ -61,7 +61,6 @@ df.to_csv(csv, index = False, encoding='utf-8')
 
 
 in_table = csv
-out_feature_class = 'Deals/{0}_deals_{1}'.format(state, date)
 x_coords = "X"
 y_coords = "Y"
 
